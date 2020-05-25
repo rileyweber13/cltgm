@@ -67,7 +67,9 @@ ROOT_URLCONF = 'cltgm.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'cltgm/templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
