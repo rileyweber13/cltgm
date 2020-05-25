@@ -1,0 +1,74 @@
+{% extends "cltgm/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!-- load static so we can use images and things -->
+{% load static %}
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-xl-8">
+        <div class="container">
+          <h1>{{ constants.BUSINESS_NAME }}</h1>
+          <p>
+            Have you ever wanted to play Dungeons and Dragons but don’t know how to
+            get started? Are you a player looking to get back into the game with a
+            few friends but you don’t have the new rulebooks? Have you been playing
+            for a while and want a custom story or setting around your character?
+            Are you just sick of being the Dungeon Master and looking to have
+            someone else do it for you so you can finally be a player?
+          </p>
+          <p>
+            {{ constants.BUSINESS_NAME }} is a tabletop roleplaying game hosting
+            service in the Charlotte, North Carolina area. Our service revolves
+            around coming to your location or finding a suitable public location
+            for a 3 to 4 hour gaming session, including character sheets, dice,
+            basic rules, figures, and sounds.
+          </p>
+          <p><a class="btn btn-primary btn-lg" href="{% url 'pricing' %}" role="button">See pricing &raquo;</a></p>
+        </div>
+      </div>
+      <div class="col-xl">
+        <img src="{% static "banner.png" %}" 
+          width="300"
+          alt="Homepage placeholder image"/>
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>What is D&D?</h2>
+          <p>
+            Dungeons and Dragons (D&D) is a tabletop roleplaying game. While
+            playing, you will gather around a table with your friends and go on
+            an adventure as a character you create!
+          </p>
+          <p><a class="btn btn-default" href="{% url 'what-is-dnd' %}" role="button">More info &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>For Parents</h2>
+          <p>
+            D&D can help your kids learn problem-solving skills that require
+            cooperation. Face-to-face interaction and social skills are key
+            components of D&D, providing a fun learning environment for kids.
+          </p>
+          <p><a class="btn btn-default" href="{% url 'for-parents' %}" role="button">More info &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Contact Me</h2>
+          <p>
+            Send me a message and we can arrange a session that fits your
+            schedule and goals.
+          </p>
+          <p><a class="btn btn-default" href="#" role="button">More info &raquo;</a></p>
+        </div>
+      </div>
+    </div>
+    {% endblock %}

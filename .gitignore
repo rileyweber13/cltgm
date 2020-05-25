@@ -1,3 +1,6 @@
+# static files
+cltgm/static
+
 # secrets
 cltgm/config.ini
 
