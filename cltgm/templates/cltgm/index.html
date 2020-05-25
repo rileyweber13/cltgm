@@ -1,143 +1,62 @@
-<!-- 
-Basic html generated with Initializr:
-http://www.initializr.com/ 
--->
+{% extends "cltgm/base.html" %}
 
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="">
-<!--<![endif]-->
+{% block title %}Home{% endblock %}
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
-
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <!--[if lt IE 9]>
-            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
-        <![endif]-->
-</head>
-
-<body>
-  <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">{{ constants.BUSINESS_NAME }} </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'home' %}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'what-is-dnd' %}">What is D&D?</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'pricing' %}">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'for-parents' %}">For Parents</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'contact-me' %}">Contact Me</a>
-        </li>
-      </ul>
-    </div>
-
-  </nav>
-
-  <!--/.navbar-collapse -->
-  </div>
-  </nav>
-
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container">
-      <h1>{{ constants.BUSINESS_NAME }}</h1>
-      <p>
-        Have you ever wanted to play Dungeons and Dragons but don’t know how to
-        get started? Are you a player looking to get back into the game with a
-        few friends but you don’t have the new rulebooks? Have you been playing
-        for a while and want a custom story or setting around your character?
-        Are you just sick of being the Dungeon Master and looking to have
-        someone else do it for you so you can finally be a player?
-      </p>
-      <p>
-        {{ constants.BUSINESS_NAME }} is a tabletop roleplaying game hosting
-        service in the Charlotte, North Carolina area. Our service revolves
-        around coming to your location or finding a suitable public location
-        for a 3 to 4 hour gaming session, including character sheets, dice,
-        basic rules, figures, and sounds.
-      </p>
-      <p><a class="btn btn-primary btn-lg" href="{% url 'pricing' %}"
-      role="button">See pricing &raquo;</a></p>
-    </div>
-  </div>
-
+{% block content %}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
   <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4">
-        <h2>What is D&D?</h2>
-        <p>
-          Dungeons and Dragons (D&D) is a tabletop roleplaying game. While
-          playing, you will gather around a table with your friends and go on
-          an adventure as a character you create!
-        </p>
-        <p><a class="btn btn-default" href="{% url 'what-is-dnd' %}"
-        role="button">More info &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>For Parents</h2>
-        <p>
-          D&D can help your kids learn problem-solving skills that require
-          cooperation. Face-to-face interaction and social skills are key
-          components of D&D, providing a fun learning environment for kids.
-        </p>
-        <p><a class="btn btn-default" href="{% url 'for-parents' %}" role="button">More info &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Contact Me</h2>
-        <p>
-          Send me a message and we can arrange a session that fits your
-          schedule and goals.
-        </p>
-        <p><a class="btn btn-default" href="#" role="button">More info &raquo;</a></p>
-      </div>
+    <h1>{{ constants.BUSINESS_NAME }}</h1>
+    <p>
+      Have you ever wanted to play Dungeons and Dragons but don’t know how to
+      get started? Are you a player looking to get back into the game with a
+      few friends but you don’t have the new rulebooks? Have you been playing
+      for a while and want a custom story or setting around your character?
+      Are you just sick of being the Dungeon Master and looking to have
+      someone else do it for you so you can finally be a player?
+    </p>
+    <p>
+      {{ constants.BUSINESS_NAME }} is a tabletop roleplaying game hosting
+      service in the Charlotte, North Carolina area. Our service revolves
+      around coming to your location or finding a suitable public location
+      for a 3 to 4 hour gaming session, including character sheets, dice,
+      basic rules, figures, and sounds.
+    </p>
+    <p><a class="btn btn-primary btn-lg" href="{% url 'pricing' %}"
+    role="button">See pricing &raquo;</a></p>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>What is D&D?</h2>
+      <p>
+        Dungeons and Dragons (D&D) is a tabletop roleplaying game. While
+        playing, you will gather around a table with your friends and go on
+        an adventure as a character you create!
+      </p>
+      <p><a class="btn btn-default" href="{% url 'what-is-dnd' %}"
+      role="button">More info &raquo;</a></p>
     </div>
-
-    <hr>
-
-    <footer>
-      <p>&copy; Company 2015</p>
-    </footer>
-  </div> <!-- /container -->
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+    <div class="col-md-4">
+      <h2>For Parents</h2>
+      <p>
+        D&D can help your kids learn problem-solving skills that require
+        cooperation. Face-to-face interaction and social skills are key
+        components of D&D, providing a fun learning environment for kids.
+      </p>
+      <p><a class="btn btn-default" href="{% url 'for-parents' %}" role="button">More info &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Contact Me</h2>
+      <p>
+        Send me a message and we can arrange a session that fits your
+        schedule and goals.
+      </p>
+      <p><a class="btn btn-default" href="#" role="button">More info &raquo;</a></p>
+    </div>
+  </div>
+</div>
+{% endblock %}

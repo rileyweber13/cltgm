@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">{{ constants.BUSINESS_NAME }} </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'what-is-dnd' %}">What is D&D?</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'pricing' %}">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'for-parents' %}">For Parents</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact-me' %}">Contact Me</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--/.navbar-collapse -->
