@@ -19,6 +19,10 @@ from django.contrib import admin
 from cltgm import views
 
 urlpatterns = [
-    url(r'^$', views.home),
-    url(r'^admin/', admin.site.urls),
+    url(r'^$', views.home, name='home'),
+    url(r'^what-is-dnd/', views.what_is_dnd, name='what-is-dnd'),
+    url(r'^pricing/', views.pricing, name='pricing'),
+    url(r'^for-parents/', views.for_parents, name='for-parents'),
+    url(r'^contact-me/', views.contact_me, name='contact-me'),
+    url(r'^admin/', admin.site.urls, name='admin'),
 ]
