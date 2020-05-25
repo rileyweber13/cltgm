@@ -7,19 +7,19 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item {{navbar_home_classes}}">
         <a class="nav-link" href="{% url 'home' %}">Home</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {{navbar_what_is_dnd_classes}}">
         <a class="nav-link" href="{% url 'what-is-dnd' %}">What is D&D?</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {{navbar_pricing_classes}}">
         <a class="nav-link" href="{% url 'pricing' %}">Pricing</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {{navbar_for_parents_classes}}">
         <a class="nav-link" href="{% url 'for-parents' %}">For Parents</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {{navbar_contact_me_classes}}">
         <a class="nav-link" href="{% url 'contact-me' %}">Contact Me</a>
       </li>
     </ul>
