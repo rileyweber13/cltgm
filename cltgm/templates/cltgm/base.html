@@ -3,6 +3,9 @@ Basic html generated with Initializr:
 http://www.initializr.com/ 
 -->
 
+<!-- load static so we can use images and things -->
+{% load static %}
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -21,7 +24,10 @@ http://www.initializr.com/
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{% static "styles.css" %}">
 
   <!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
@@ -34,6 +40,8 @@ http://www.initializr.com/
         <![endif]-->
   
   {% include "cltgm/nav.html" %}
+
+  <div class="spacer"></div>
 
   {% block content %}{% endblock %}
 
