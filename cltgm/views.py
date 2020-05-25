@@ -10,19 +10,19 @@ def home(request):
 def what_is_dnd(request):
     context = {
     }
-    return render(request, 'cltgm/what-is-dnd.html', context)
+    return render(request, 'cltgm/info/what-is-dnd.html', context)
 
 def pricing(request):
     context = {
     }
-    return render(request, 'cltgm/pricing.html', context)
+    return render(request, 'cltgm/info/pricing.html', context)
 
 def for_parents(request):
     context = {
     }
-    return render(request, 'cltgm/for-parents.html', context)
+    return render(request, 'cltgm/info/for-parents.html', context)
 
 def contact_me(request):
     context = {
     }
-    return render(request, 'cltgm/contact-me.html', context)
+    return render(request, 'cltgm/info/contact-me.html', context)
