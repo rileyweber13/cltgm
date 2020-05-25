@@ -89,8 +89,8 @@ WSGI_APPLICATION = 'cltgm.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django',
-        'USER': 'django',
+        'NAME': config['db_info']['db_name'],
+        'USER': config['db_info']['user_name'],
         'PASSWORD': config['secrets']['db_password'],
         'HOST': 'localhost',
         'PORT': '',
@@ -136,4 +136,6 @@ def ip_addresses():
 
 # Discover our IP address
 ALLOWED_HOSTS = ip_addresses()
+if config['server_settings']['additional_allowed_ips'] != '':
+    ALLOWED_HOSTS += config['server_settings']['additional_allowed_ips'].split(',')
 
