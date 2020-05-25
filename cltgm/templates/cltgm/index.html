@@ -84,7 +84,8 @@ http://www.initializr.com/
         for a 3 to 4 hour gaming session, including character sheets, dice,
         basic rules, figures, and sounds.
       </p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">See pricing &raquo;</a></p>
+      <p><a class="btn btn-primary btn-lg" href="{% url 'pricing' %}"
+      role="button">See pricing &raquo;</a></p>
     </div>
   </div>
 
@@ -93,24 +94,30 @@ http://www.initializr.com/
     <div class="row">
       <div class="col-md-4">
         <h2>What is D&D?</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-          condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-          Donec sed odio dui. </p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <p>
+          Dungeons and Dragons (D&D) is a tabletop roleplaying game. While
+          playing, you will gather around a table with your friends and go on
+          an adventure as a character you create!
+        </p>
+        <p><a class="btn btn-default" href="{% url 'what-is-dnd' %}"
+        role="button">More info &raquo;</a></p>
       </div>
       <div class="col-md-4">
         <h2>For Parents</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-          condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-          Donec sed odio dui. </p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <p>
+          D&D can help your kids learn problem-solving skills that require
+          cooperation. Face-to-face interaction and social skills are key
+          components of D&D, providing a fun learning environment for kids.
+        </p>
+        <p><a class="btn btn-default" href="{% url 'for-parents' %}" role="button">More info &raquo;</a></p>
       </div>
       <div class="col-md-4">
         <h2>Contact Me</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-          felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-          massa justo sit amet risus.</p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <p>
+          Send me a message and we can arrange a session that fits your
+          schedule and goals.
+        </p>
+        <p><a class="btn btn-default" href="#" role="button">More info &raquo;</a></p>
       </div>
     </div>
 
