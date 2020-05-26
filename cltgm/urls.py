@@ -19,7 +19,6 @@ from django.contrib import admin
 from cltgm import views
 
 urlpatterns = [
-    url(r'^send-email/', views.send_email, name='send-email'),
     url(r'^$', views.home, name='home'),
     url(r'^what-is-dnd/', views.what_is_dnd, name='what-is-dnd'),
     url(r'^pricing/', views.pricing, name='pricing'),

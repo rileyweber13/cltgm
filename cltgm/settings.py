@@ -146,3 +146,14 @@ ALLOWED_HOSTS = ip_addresses()
 if config['server_settings']['additional_allowed_ips'] != '':
     ALLOWED_HOSTS += config['server_settings']['additional_allowed_ips'].split(',')
 
+if config['server_settings'].getboolean('email_debug'):
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_PORT = '465'
+    EMAIL_USE_SSL = True
+    # EMAIL_PORT = '587'
+    # EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = config['server_settings']['smtp_login_username']
+    EMAIL_HOST_PASSWORD = config['secrets']['email_smtp_password']
