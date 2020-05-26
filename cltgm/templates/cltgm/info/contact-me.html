@@ -7,5 +7,119 @@
   <h1>
     Contact Me
   </h1>
-</div>
+  <p>
+    Want to schedule a session? Or maybe you have further questions before we
+    get started? Send me a message below and I'll get back to you as soon as I
+    can!
+  </p>
+
+  {% if form_status == "success" %}
+    <div class="alert alert-success" role="alert">
+      Your message was successfully sent! Thank you!
+    </div>
+  {% endif %}
+
+  {% if form.errors %}
+    <div class="alert alert-warning" role="alert">
+      There was a problem submitting your form. Please correct the following 
+      errors:
+      {% comment %} <ul>
+      {% for error in form.errors.as_json() %}
+        <li>{{ error[] }}</li>
+      {% endfor %}
+      </ul> {% endcomment %}
+      {{ form.errors }}
+    </div>
+  {% endif %}
+
+  <!-- contact form taken from https://mdbootstrap.com/docs/jquery/forms/contact/ -->
+  <div class="row">
+
+    <!--Grid column-->
+    {% comment %} <div class="col-md mb-md-0 mb-5"> {% endcomment %}
+    <div class="container">
+      <form id="contact-form" 
+        name="contact-form" 
+        action="{% url "contact-me" %}"
+        method="POST">
+
+        {% csrf_token %}
+
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-md-6">
+            <div class="md-form mb-0">
+              <input 
+                type="text" 
+                id="name" 
+                name="author_name" 
+                class="form-control"
+                value="{{ form.data.author_name }}">
+                <label for="name" class="">Your name</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6">
+            <div class="md-form mb-0">
+              <input type="text" id="email" name="author_email" class="form-control"
+                value="{{ form.data.author_email }}">
+              <label for="email" class="">Your email</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+        <!--Grid row-->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="md-form mb-0">
+              <input type="text" id="subject" name="subject" class="form-control"
+                value="{{ form.data.subject }}">
+              <label for="subject" class="">Subject</label>
+            </div>
+          </div>
+        </div>
+        <!--Grid row-->
+
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-md-12">
+
+            <div class="md-form">
+              <textarea type="text" id="message" name="message" rows="5" 
+                class="form-control md-textarea"
+                >{{ form.data.message }}</textarea> 
+
+                <label for="message">Your message</label>
+            </div>
+
+          </div>
+        </div>
+        <!--Grid row-->
+
+      </form>
+    </div>
+    <!--form container-->
+
+
+  </div>
+
+  <p><em>* all fields are required</em></p>
+
+  <div class="text-center text-md-left">
+    <a class="btn btn-primary" 
+      onclick="document.getElementById('contact-form').submit();">
+      Send
+    </a>
+  </div>
+
+</div> 
 {% endblock %}

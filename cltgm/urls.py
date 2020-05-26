@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^pricing/', views.pricing, name='pricing'),
     url(r'^for-parents/', views.for_parents, name='for-parents'),
     url(r'^contact-me/', views.contact_me, name='contact-me'),
+    url(r'^404/', views.not_found, name='404'),
     url(r'^admin/', admin.site.urls, name='admin'),
 ]
