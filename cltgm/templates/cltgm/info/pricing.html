@@ -4,13 +4,17 @@
 
 {% block title %}Pricing{% endblock %}
 
+{% block additional_stylesheets %}
+<link rel="stylesheet" href={% static "cltgm/pricing.css" %}>
+{% endblock %}
+
 {% block content %}
 <div class="container">
   <h1>
     Pricing
   </h1>
-
-  <div class="spacer"></div>
+  
+  <div class="pricing-section">
 
   <div class="row">
     <div class="col-sm">
@@ -32,8 +36,7 @@
         data-target="#new-players-description" 
         aria-expanded="false" 
         aria-controls="new-players-description"
-        id="new-players-description-button"
-        onclick=>
+        id="new-players-description-button">
         {% include "cltgm/small-down-caret.html" %}
       </button>
     </div>
@@ -61,8 +64,9 @@
       Players.
     </p>
   </div>
-
-  <div class="spacer"></div>
+  </div>
+  
+  <div class="pricing-section">
   
   <div class="row">
     <div class="col-sm">
@@ -84,8 +88,7 @@
         data-target="#families-description" 
         aria-expanded="false" 
         aria-controls="families-description"
-        id="families-description-button"
-        onclick=>
+        id="families-description-button">
         {% include "cltgm/small-down-caret.html" %}
       </button>
     </div>
@@ -119,7 +122,9 @@
     </p>
   </div>
 
-  <div class="spacer"></div>
+  </div>
+  
+  <div class="pricing-section">
   
   <div class="row">
     <div class="col-sm">
@@ -141,8 +146,7 @@
         data-target="#returning-players-description" 
         aria-expanded="false" 
         aria-controls="returning-players-description"
-        id="returning-players-description-button"
-        onclick=>
+        id="returning-players-description-button">
         {% include "cltgm/small-down-caret.html" %}
       </button>
     </div>
@@ -183,7 +187,9 @@
     </p>
   </div>
 
-  <div class="spacer"></div>
+  </div>
+  
+  <div class="pricing-section">
   
   <div class="row">
     <div class="col-sm">
@@ -205,8 +211,7 @@
         data-target="#custom-setting-description" 
         aria-expanded="false" 
         aria-controls="custom-setting-description"
-        id="custom-setting-description-button"
-        onclick=>
+        id="custom-setting-description-button">
         {% include "cltgm/small-down-caret.html" %}
       </button>
     </div>
@@ -255,7 +260,9 @@
     </p>
   </div>
 
-  <div class="spacer"></div>
+  </div>
+  
+  <div class="pricing-section">
   
   <div class="row">
     <div class="col-sm">
@@ -277,8 +284,7 @@
         data-target="#dungeon-challenge-description" 
         aria-expanded="false" 
         aria-controls="dungeon-challenge-description"
-        id="dungeon-challenge-description-button"
-        onclick=>
+        id="dungeon-challenge-description-button">
         {% include "cltgm/small-down-caret.html" %}
       </button>
     </div>
@@ -297,7 +303,9 @@
     </p>
   </div>
 
-  <div class="spacer"></div>
+  </div>
+  
+  <div class="pricing-section">
   
   <div class="row">
     <div class="col-sm">
@@ -319,8 +327,7 @@
         data-target="#dice-description" 
         aria-expanded="false" 
         aria-controls="dice-description"
-        id="dice-description-button"
-        onclick=>
+        id="dice-description-button">
         {% include "cltgm/small-down-caret.html" %}
       </button>
     </div>
@@ -344,8 +351,8 @@
     </p>
   </div>
 
-  <div class="spacer"></div>
   
+  <div class="pricing-section">
   <div class="row">
     <div class="col-sm">
       <h2>
@@ -366,8 +373,7 @@
         data-target="#miniatures-description" 
         aria-expanded="false" 
         aria-controls="miniatures-description"
-        id="miniatures-description-button"
-        onclick=>
+        id="miniatures-description-button">
         {% include "cltgm/small-down-caret.html" %}
       </button>
     </div>
@@ -391,6 +397,11 @@
       players, and friends.
     </p>
   </div>
-
+  </div>
+  
 </div>
+{% endblock %}
+
+{% block additional_scripts %}
+<script src={% static "cltgm/pricing.js" %}></script>
 {% endblock %}
