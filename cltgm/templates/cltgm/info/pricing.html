@@ -1,5 +1,7 @@
 {% extends "cltgm/base.html" %}
 
+{% load static %}
+
 {% block title %}Pricing{% endblock %}
 
 {% block content %}
@@ -8,9 +10,36 @@
     Pricing
   </h1>
 
-  <h2>
-    Introduction for New Players
-  </h2>
+  <div class="spacer"></div>
+
+  <div class="row">
+    <div class="col-sm">
+      <h2>
+        Introduction for New Players
+      </h2>
+    </div>
+
+    <div class="col-md-4">
+      <h2>
+        $50/player
+      </h2>
+    </div>
+
+    <div class="col-sm-1">
+      <button class="btn btn-secondary btn-collapse" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#new-players-description" 
+        aria-expanded="false" 
+        aria-controls="new-players-description"
+        id="new-players-description-button"
+        onclick=>
+        {% include "cltgm/small-down-caret.html" %}
+      </button>
+    </div>
+  </div>
+
+<div class="collapse" id="new-players-description">
   <p>
     If you and a few friends would like to learn the basics of how to play then
     this is the session for you. The Intro session includes one 3 to 4 hour
@@ -31,10 +60,38 @@
     The fee is $50 per participating Player. The standard group is 4 to 6
     Players.
   </p>
+</div>
 
-  <h2>
-    Introduction for Families
-  </h2>
+  <div class="spacer"></div>
+  
+  <div class="row">
+    <div class="col-sm">
+      <h2>
+        Introduction for Families
+      </h2>
+    </div>
+
+    <div class="col-md-4">
+      <h2>
+        $50/adult, $75/child
+      </h2>
+    </div>
+
+    <div class="col-sm-1">
+      <button class="btn btn-secondary btn-collapse" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#families-description" 
+        aria-expanded="false" 
+        aria-controls="families-description"
+        id="families-description-button"
+        onclick=>
+        {% include "cltgm/small-down-caret.html" %}
+      </button>
+    </div>
+  </div>
+
+<div class="collapse" id="families-description">
   <p>
     If you would like to introduce the magic you remember from childhood to
     your children or you just plain don’t understand what your kids keep
@@ -60,10 +117,38 @@
     The fee is $75 per participating Child Player and $50 per participating
     Adult Player. The standard group is 3 to 6 Players.
   </p>
+</div>
 
-  <h2>
-    Reintroduction for Returning Players
-  </h2>
+  <div class="spacer"></div>
+  
+  <div class="row">
+    <div class="col-sm">
+      <h2>
+        Reintroduction for Returning Players
+      </h2>
+    </div>
+
+    <div class="col-md-4">
+      <h2>
+        $50/player
+      </h2>
+    </div>
+
+    <div class="col-sm-1">
+      <button class="btn btn-secondary btn-collapse" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#returning-players-description" 
+        aria-expanded="false" 
+        aria-controls="returning-players-description"
+        id="returning-players-description-button"
+        onclick=>
+        {% include "cltgm/small-down-caret.html" %}
+      </button>
+    </div>
+  </div>
+
+<div class="collapse" id="returning-players-description">
   <p>
     If you have played other tabletop roleplaying games in the past or want to
     return to D&D this session is for you. The Reintroduction session includes
@@ -96,10 +181,38 @@
     created due to the additional time and resources necessary to create the
     characters.
   </p>
+</div>
 
-  <h2>
-    Custom Setting or Campaign
-  </h2>
+  <div class="spacer"></div>
+  
+  <div class="row">
+    <div class="col-sm">
+      <h2>
+        Custom Setting or Campaign
+      </h2>
+    </div>
+
+    <div class="col-md-4">
+      <h2>
+        $75-100+/player
+      </h2>
+    </div>
+
+    <div class="col-sm-1">
+      <button class="btn btn-secondary btn-collapse" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#custom-setting-description" 
+        aria-expanded="false" 
+        aria-controls="custom-setting-description"
+        id="custom-setting-description-button"
+        onclick=>
+        {% include "cltgm/small-down-caret.html" %}
+      </button>
+    </div>
+  </div>
+
+<div class="collapse" id="custom-setting-description">
   <p>
     If you’re familiar with D&D 5e or you’ve tried one of our introductory
     Starter Set and want to continue with the same characters, or you have
@@ -140,10 +253,38 @@
     character created due to the additional time and resources necessary to
     comb through all available tomes of knowledge for your character.
   </p>
+</div>
 
-  <h2>
-    Dungeon Challenge
-  </h2>
+  <div class="spacer"></div>
+  
+  <div class="row">
+    <div class="col-sm">
+      <h2>
+        Dungeon Challenge
+      </h2>
+    </div>
+
+    <div class="col-md-4">
+      <h2>
+        $25/player
+      </h2>
+    </div>
+
+    <div class="col-sm-1">
+      <button class="btn btn-secondary btn-collapse" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#dungeon-challenge-description" 
+        aria-expanded="false" 
+        aria-controls="dungeon-challenge-description"
+        id="dungeon-challenge-description-button"
+        onclick=>
+        {% include "cltgm/small-down-caret.html" %}
+      </button>
+    </div>
+  </div>
+
+<div class="collapse" id="dungeon-challenge-description">
   <p>
     Are you looking just to keep the good times rolling on a schedule that
     suits you? We are currently looking to begin Dungeon Challenge sessions
@@ -154,10 +295,38 @@
     Dungeon Challenges occur as long as there is at least one Player available,
     although the ideal group is between 4 and 6 players.
   </p>
+</div>
 
-  <h2>
-    Dice
-  </h2>
+  <div class="spacer"></div>
+  
+  <div class="row">
+    <div class="col-sm">
+      <h2>
+        Dice
+      </h2>
+    </div>
+
+    <div class="col-md-4">
+      <h2>
+        varies
+      </h2>
+    </div>
+
+    <div class="col-sm-1">
+      <button class="btn btn-secondary btn-collapse" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#dice-description" 
+        aria-expanded="false" 
+        aria-controls="dice-description"
+        id="dice-description-button"
+        onclick=>
+        {% include "cltgm/small-down-caret.html" %}
+      </button>
+    </div>
+  </div>
+
+<div class="collapse" id="dice-description">
   <p>
     You may fall in love with a particular dice set that we use or have such
     great success with it that you wish to purchase it during or after your
@@ -173,8 +342,38 @@
     Emporiums, as your local game store is your portal to new games, players,
     and friends.
   </p>
+</div>
 
-  <h2>Miniatures</h2>
+  <div class="spacer"></div>
+  
+  <div class="row">
+    <div class="col-sm">
+      <h2>
+        Miniatures
+      </h2>
+    </div>
+
+    <div class="col-md-4">
+      <h2>
+        varies
+      </h2>
+    </div>
+
+    <div class="col-sm-1">
+      <button class="btn btn-secondary btn-collapse" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#miniatures-description" 
+        aria-expanded="false" 
+        aria-controls="miniatures-description"
+        id="miniatures-description-button"
+        onclick=>
+        {% include "cltgm/small-down-caret.html" %}
+      </button>
+    </div>
+  </div>
+
+<div class="collapse" id="miniatures-description">
   <p>
     You may fall in love with a particular miniature that we use and want to
     keep it as a souvenir or for your own gaming sessions. Miniatures are
@@ -191,6 +390,7 @@
     Online Emporiums, as your local game store is your portal to new games,
     players, and friends.
   </p>
+</div>
 
 </div>
 {% endblock %}
