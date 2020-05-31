@@ -8,6 +8,10 @@
 <link rel="stylesheet" href={% static "cltgm/pricing.css" %}>
 {% endblock %}
 
+{% block additional_scripts %}
+<script src={% static "cltgm/pricing.js" %}></script>
+{% endblock %}
+
 {% block content %}
 <div class="container">
   <h1>
@@ -400,8 +404,4 @@
   </div>
   
 </div>
-{% endblock %}
-
-{% block additional_scripts %}
-<script src={% static "cltgm/pricing.js" %}></script>
 {% endblock %}
