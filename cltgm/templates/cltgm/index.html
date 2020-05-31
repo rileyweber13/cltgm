@@ -2,16 +2,20 @@
 
 {% block title %}Home{% endblock %}
 
-{% block content %}
-
 <!-- load static so we can use images and things -->
 {% load static %}
+
+{% block additional_stylesheets %}
+<link rel=stylesheet href={% static "cltgm/home.css" %}>
+{% endblock %}
+
+{% block content %}
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="container">
   <div class="jumbotron">
     <div class="row">
-      <div class="col-xl-8">
+      <div class="col-xl-9">
         <div class="container">
           <h1>{{ constants.BUSINESS_NAME }}</h1>
           <p>
@@ -32,10 +36,11 @@
           <p><a class="btn btn-primary btn-lg" href="{% url 'pricing' %}" role="button">See pricing &raquo;</a></p>
         </div>
       </div>
-      <div class="col-xl">
-        <img src="{% static "cltgm/banner.png" %}" 
-          width="300"
-          alt="Homepage placeholder image"/>
+      <div class="col-lg">
+        <img id="banner-right" 
+          src="{% static "images/fantasy-character.png" %}" 
+          height="350"
+          alt="A fantasy character holding a spear"/>
       </div>
     </div>
   </div>
