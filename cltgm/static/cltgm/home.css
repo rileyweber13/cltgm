@@ -3,3 +3,31 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+#banner-image-and-text {
+  position: relative;
+  margin: 2em 0 2em 0;
+}
+
+#banner-text-box {
+  background-color: #4E5D6C;
+}
+
+@media only screen 
+and (min-device-width : 770px) {
+  #banner-text-box {
+    position: absolute;
+    left: 2em;
+    bottom: 2em;
+    padding: 1.0em;
+    width: 60%;
+  }
+}
+
+@media only screen 
+and (max-device-width : 770px) {
+  #banner-text-box {
+    margin: 1.0em 0 1.0em 0;
+    padding: 4.0em 2.0em 4.0em 2.0em;
+  }
+}
