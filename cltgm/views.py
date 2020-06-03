@@ -63,7 +63,7 @@ def contact_me(request):
             try:
                 send_mail(subject, 
                     message, 
-                    author_email, 
+                    'noreply@cltgm.com',
                     [config['server_settings']['business_contact_email']])
 
             except BadHeaderError:
