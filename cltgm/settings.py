@@ -82,6 +82,48 @@ TEMPLATES = [
     },
 ]
 
+# A sample logging configuration. The only tangible logging
+# performed by this configuration is to send an email to
+# the site admins on every HTTP 500 error when DEBUG=False.
+# See http://docs.djangoproject.com/en/dev/topics/logging for
+# more details on how to customize your logging configuration.
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler'
+        },
+        'applogfile': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'CLTGM.log'),
+            #'filename': '/var/log/cltgm/CLTGM_DJANGO.log',
+            'maxBytes': 1024*1024*15, # 15MB
+            'backupCount': 10,
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+        'django': {
+            'handlers': ['applogfile'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    }
+}
+
 WSGI_APPLICATION = 'cltgm.wsgi.application'
 
 
@@ -150,10 +192,9 @@ if config['server_settings'].getboolean('email_debug'):
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST = 'smtp.sendgrid.net'
     EMAIL_PORT = '465'
     EMAIL_USE_SSL = True
-    # EMAIL_PORT = '587'
-    # EMAIL_USE_TLS = True
     EMAIL_HOST_USER = config['server_settings']['smtp_login_username']
     EMAIL_HOST_PASSWORD = config['secrets']['email_smtp_password']
+
