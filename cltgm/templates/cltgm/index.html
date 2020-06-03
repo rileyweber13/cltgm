@@ -9,15 +9,72 @@
 <link rel=stylesheet href={% static "cltgm/home.css" %}>
 {% endblock %}
 
+{% block additional_scripts%}
+<script src={% static "cltgm/home.js" %}></script>
+{% endblock %}
+
 {% block content %}
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="container">
+
+  <div class="container">
+
+    <div id="banner-image-and-text">
+      <img id="banner-image" 
+        {% comment %} src="{% static "images/rpg-dice.jpg" %}" {% endcomment %}
+        src="{% static "images/figure-on-grid.jpg" %}"
+        width="100%"/>
+
+      <div id="banner-text-box" class="floating">
+        <h1>{{ constants.BUSINESS_NAME }}</h1>
+        {% comment %} <p>We bring the game to you with professional game master services</p> {% endcomment %}
+        <p>We make playing your favorite tabletop rpg easy with professional game master services</p>
+        <a class="btn btn-primary" 
+          href="{% url "contact-me" %}">
+          Schedule your session today
+          </a>
+      </div>
+    </div>
+
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2>What is D&D?</h2>
+        <p>
+          Dungeons and Dragons (D&D) is a tabletop roleplaying game. While
+          playing, you will gather around a table with your friends and go on
+          an adventure as a character you create!
+        </p>
+        <p><a class="btn btn-secondary" href="{% url 'what-is-dnd' %}" role="button">More info &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>For Parents</h2>
+        <p>
+          D&D can help your kids learn problem-solving skills that require
+          cooperation. Face-to-face interaction and social skills are key
+          components of D&D, providing a fun learning environment for kids.
+        </p>
+        <p><a class="btn btn-secondary" href="{% url 'for-parents' %}" role="button">More info &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Contact Me</h2>
+        <p>
+          Send me a message and we can arrange a session that fits your
+          schedule and goals.
+        </p>
+        <p><a class="btn btn-secondary" href="#" role="button">More info &raquo;</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
   <div class="jumbotron">
     <div class="row">
       <div class="col-lg-9">
         <div class="container">
-          <h1>{{ constants.BUSINESS_NAME }}</h1>
+          <h1>D&D, without the stress</h1>
           <p>
             Have you ever wanted to play Dungeons and Dragons but don’t know how to
             get started? Are you a player looking to get back into the game with a
@@ -45,35 +102,4 @@
     </div>
   </div>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>What is D&D?</h2>
-          <p>
-            Dungeons and Dragons (D&D) is a tabletop roleplaying game. While
-            playing, you will gather around a table with your friends and go on
-            an adventure as a character you create!
-          </p>
-          <p><a class="btn btn-secondary" href="{% url 'what-is-dnd' %}" role="button">More info &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>For Parents</h2>
-          <p>
-            D&D can help your kids learn problem-solving skills that require
-            cooperation. Face-to-face interaction and social skills are key
-            components of D&D, providing a fun learning environment for kids.
-          </p>
-          <p><a class="btn btn-secondary" href="{% url 'for-parents' %}" role="button">More info &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Contact Me</h2>
-          <p>
-            Send me a message and we can arrange a session that fits your
-            schedule and goals.
-          </p>
-          <p><a class="btn btn-secondary" href="#" role="button">More info &raquo;</a></p>
-        </div>
-      </div>
-    </div>
-    {% endblock %}
+{% endblock %}
