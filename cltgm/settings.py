@@ -38,7 +38,7 @@ SECRET_KEY = config['secrets']['django_secret_key']
 DEBUG = config['server_settings'].getboolean('debug')
 
 # Discover our IP address
-ALLOWED_HOSTS = ip_addresses()
+#ALLOWED_HOSTS = ip_addresses()
 
 # Application definition
 
