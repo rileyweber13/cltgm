@@ -1,2 +1,2 @@
-BUSINESS_NAME="CLT Game Master"
+BUSINESS_NAME="Charlotte Game Master"
 BUSINESS_NAME_SHORT="CLTGM"
